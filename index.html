@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplu Cookies</title>
+    <script>
+        // Setăm două cookie-uri
+        document.cookie = "session=test GDPR";
+        document.cookie = "favorite_task=collect Data";
+
+        // Funcția care afișează cookie-urile într-un alert
+        function alertCookie() {
+            alert(document.cookie);
+        }
+    </script>
+</head>
+<body>
+    <h1>Bine ai venit la laborator!</h1>
+    <button onclick="alertCookie()">Afișează cookie-urile</button>
+</body>
+</html>

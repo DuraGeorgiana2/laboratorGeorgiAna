@@ -30,9 +30,40 @@
             alert(document.cookie);
         }
     </script>
+
+//exemple din pagina 
+<script>
+  // Setăm două cookie-uri
+  document.cookie = "name=Oeschger; SameSite=None; Secure";
+  document.cookie = "favorite_food=tripe; SameSite=None; Secure";
+
+  // Afișăm toate cookie-urile
+  function showCookies() {
+    const output = document.getElementById("cookies");
+    output.textContent = `> ${document.cookie}`;
+  }
+
+  // Ștergem textul afișat (nu cookie-urile)
+  function clearOutputCookies() {
+    const output = document.getElementById("cookies");
+    output.textContent = "";
+  }
+</script>
+
+    
 </head>
 <body>
     <h1>Bine ai venit la laborator!</h1>
     <button onclick="alertCookie()">Afișează cookie-urile</button>
+    <button onclick="showCookies()">Show cookies pentru exemplul 1</button>
+
+<button onclick="clearOutputCookies()">Clear</button>
+
+<div>
+  <code id="cookies"></code>
+</div>
+
+
+    
 </body>
 </html>

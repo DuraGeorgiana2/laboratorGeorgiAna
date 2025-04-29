@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemple cookie-uri</title>
+</head>
+<body>
+  <h1>Cookie-uri în JavaScript</h1>
+
+  <!-- Exemplu 1 -->
+  <button onclick="document.cookie = 'nume=Ana'; alert(document.cookie);">
+    Setează și afișează cookie
+  </button>
+
+  <!-- Exemplu 2 -->
+  <button onclick="verificaCookie()">Verifică dacă cookie-ul există</button>
+
+  <script>
+    function verificaCookie() {
+      if (document.cookie.includes("nume=Ana")) {
+        alert("Cookie-ul 'nume' există și are valoarea Ana");
+      } else {
+        alert("Cookie-ul nu există");
+      }
+    }
+  </script>
+</body>
+</html>
